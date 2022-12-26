@@ -10,7 +10,7 @@
    // result[i].textContent = "** REDACTED **"
 //}
 
-var result = document.getElementById("favorite-things")
+//var result = document.getElementById("favorite-things")
 
 console.log(Array.from(result))
     //This isn't logging the array, do I need to actually define the 'ol' or 'li' before listing the result?

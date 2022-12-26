@@ -1,0 +1,16 @@
+element.style{
+    width: 50
+}
+.shape-container{
+    margin: 100px;
+    display: inline-block;
+    width: 50%;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.shape {
+    display: inline-block;
+}
