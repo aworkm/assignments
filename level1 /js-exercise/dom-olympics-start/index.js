@@ -42,7 +42,7 @@ const rightTwo = document.querySelector('.messages :nth-child(4)');
 
 leftOne.textContent = 'I am learning JavaScript.';
 rightOne.textContent = 'Day-by-day, that is the plan!';
-leftTwo.textContent = 'Way to be! I will make a big difference, and a lot of money.';
+leftTwo.textContent = 'Way to be! You will make a big difference.';
 rightTwo.textContent = 'I belive in you. Stay consistent and keep asking questions.';
 
 /* Changing the theme of the backagound colors of the messages */
@@ -80,4 +80,9 @@ const newMessage = document.getElementById('new-message').addEventListener('clic
     input.value = '';
 })
 
-/* Every other message will be posted on the right in one color, and the next on the left the other color. */
+/* Every other message will be posted on the right in one color, and the next on the left the other color. 
+
+I know that I need to add the class someplace on the HTML to be able to querySelect and add an eventListener. 
+I will ask an instructor directly once I have more time to think about this. 
+
+I am fairly certain that it needs to be a function and for loop array combined with a condtitional statment. */
