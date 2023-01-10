@@ -4,6 +4,7 @@ const colors = ["red", "blue", "green"]
 document.getElementById("add").addEventListener("click", function(e){
     const subItem = createSubItem(e)
     document.getElementById("list").appendChild(subItem)
+    console.log("here")
 })
 
 //In order to call the full value, have to add '.length' so the loop will go through the entire array. Then have to add 'document' to creating an element so the js knows where to create the element. 
