@@ -73,23 +73,32 @@ theme.addEventListener('change', (e) => {
 });
 
 /* For appendiing  a new element into the document based on user interaction */ 
-
+let sideToggle = true;
 const newMessage = document.getElementById('new-message').addEventListener('click', (e) => {
     
     e.preventDefault();
     const altMessage = document.createElement('div');
     //using template literal the message shows up in the html with the div class, but the class 'align-self' is not looking the same as the other messages. Is it because the right side is not submitted yet? the 'right' class has the 'flex-end' wherase the 'left' class has 'flex-start' so I think i would need to declair a new variable like 'altMessageR' to be able to complete the 'flex' in order for it to shorten the end on the left. After creating the 'altMessageR' then i could continue building the for loop/condittional?  
-    altMessage.innerHTML += `<div class="message left"> ${input.value} </div>`
+    altMessage.innerHTML += `${input.value}`;
+    //console.log(altMessage.classList);
+    if (sideToggle === true){
+        altMessage.classList.add("message", "left")
+        console.log(altMessage.classList)
+    }else {
+        altMessage.classList.add("message", "right")
+        console.log(altMessage.classList)
+    }
+    sideToggle = !sideToggle /* the ! allows for muting the variable because using a let statment*/
     messages.append(altMessage);
+
     input.value = ''; 
 });
 
-for( let i = 0; i <= messages.children.length; i++){
-    if(i%2 === 0){
-       messages.children[i] 
-    } 
-    
-}
+// for( let i = 0; i <= messages.children.length; i++){
+//     if(i%2 === 0){
+//        messages.children[i] 
+//     } 
+// }
 
 console.log(messages.children)
 /* Every other message will be posted on the right in one color, and the next on the left the other color. 
