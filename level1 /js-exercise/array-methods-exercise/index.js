@@ -27,16 +27,16 @@ var fruit = ["banana", "apple", "orange", "watermelon"];
 var vegetables = ["carrot", "tomato", "pepper", "lettuce"];
 
     //1 - remove last item from veg arr
-//vegetables.pop();
+vegetables.pop();
 // console.log(vegetables);
     //2 - remove 1st itm from fruit arr
-//fruit.shift();
+fruit.shift();
 // console.log(fruit)
-    //3 & 4 - find index of orange + add the number to end of the fruit array
-//fruit.push(fruit.indexOf("orange"));
+    // 3 & 4 - find index of orange + add the number to end of the fruit array
+fruit.push(fruit.indexOf("orange"));
 //console.log(fruit);
     // 5 & 6 - use length of property to find length of veg arr + add that number to the end of veg arr
-//vegetables.push(vegetables.length);
+vegetables.push(vegetables.length);
 //console.log(vegetables);
     // 7 put the 2 arrays into one arr. call it 'food'
 const food = fruit.concat(vegetables);
