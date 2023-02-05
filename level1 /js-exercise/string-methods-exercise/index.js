@@ -1,0 +1,1 @@
+//Write a function that takes a string as a parameter and returns the same string in all capital letters followed by all lowercase letters.
