@@ -30,8 +30,10 @@ function Employee(name, job, salary, status, printEmployeeForm){
     this.job = job
     this.salary = salary
     this.status = 'Full Time'
+    this.printEmployeeForm = printEmployeeForm
 }
 //console.log(Employee)
+
 //variable for each employee
 const alyssa = new Employee('Alyssa Workman', 'Developer', '85k', 'Part time');
 const oussama = new Employee('Oussama Mhalla', 'Videographer', '70k', 'Part time');
@@ -39,6 +41,8 @@ const nova = new Employee('Nova Bjorn', 'Nurse', '100k', 'Full time');
 const vania = new Employee('Vania Jenny', 'HR', '65k', 'Full time');
 // console.log(alyssa)
 // console.log(oussama)
+
+//override the attribute of one employee status to 'Contractor'
 alyssa.status = 'Contractor'
 employees.push(alyssa, oussama, nova, vania);
 //console.log(employees);
@@ -56,3 +60,4 @@ alyssa.employeeForm();
 oussama.employeeForm();
 nova.employeeForm();
 vania.employeeForm();
+
