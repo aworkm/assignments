@@ -4,7 +4,7 @@
     padding: 0;
   }
   
-  /* *********Image Number 1********* */
+  /* Image Number 1 */
   
   #grid-container {
     display: grid;
@@ -61,7 +61,7 @@
     grid-column: 1 / 7;
   }
   
-  /* *********Image Number 2********** */
+  /* Image Number 2 */
   
   #grid-container-two {
     display: grid;
