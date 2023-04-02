@@ -4,8 +4,8 @@
 const readLine = require("readline-sync");
 const greeting = console.log("Greetings traveler, you are about to embark on a journey of a lifetime to collect knowledge by resistance to temptations like Doubt, Negative self-talk, Procrastination, and Distractions. It will take stamina, patience, discernment in order to keep moral high.");
 const userName = readLine.question("Before we begin, please tell me your name: ");
-let userInventory = [];
-let hasItems = false;
+let userTools = [];
+let hasTools = false;
 let hp = 100;
 let temptationHp = 100; 
 let resistanceEquipped = false;
@@ -24,10 +24,10 @@ function walk() {
             fight();
         }
     } else if (userOption === 1) {
-    console.log (`\nUsername: ${userName}\nHP: ${hp}\nItems: ${userInventory}\nLevel: ${playerLevel}\n`);
-//If user has items and user will run if === true;
-    } else if (userOption === 2 && hasItems) {
-        const equipResistance = readLine.keyInYN("Do you want to equipt mindset tools to resist this temptation and increase your chances to reach enlightenment?");
+    console.log (`\nUsername: ${userName}\nHP: ${hp}\nTools: ${userTools}\nLevel: ${playerLevel}\n`);
+//If user has tools and user will run if === true;
+    } else if (userOption === 2 && hasTools) {
+        const equipResistance = readLine.keyInYN("Do you want to equipt mindset tools to resist temptation and increase your chances to reach enlightenment?");
         if (equipResistance === true) {
                 resistanceEquipped = true;
         }
@@ -57,16 +57,16 @@ function determineWinner() {
     const temptations = ["Doubt", "Procrastination", "Distraction", "Negative Self-Talk"];
     const randomTemptation = Math.floor(Math.random() * temptations.length);
     const temptation = temptations[randomTemptation];
-    const items = ["Affirmation", "Calling Guides and Guardians", "Meditate", "Banish It"];
-    const randomItems = Math.floor(Math.random() * items.length);
-    const playerItem = items [randomItems];
+    const tools = ["Affirmation", "Calling Guides and Guardians", "Meditate", "Banish It"];
+    const randomTools = Math.floor(Math.random() * tools.length);
+    const playerTool = tools [randomTools];
 
     while (hp > 0 && temptationHp > 0) {
         const playerDmg = randomDmg(10, 16);
         const temptationDmg = randomDmg(5, 8);
         const bonusDMG = randomDmg(5,11);
         const attack = readLine.keyIn("Press 'a' to abstain from temptation! ", { limit: "a"});
-//Check for items equipped to abstain from temptation
+//Check for tools equipped to abstain from temptation
         if (resistanceEquipped === true){
             console.log(
                 `\nYou abstain from the ${temptation} for ${playerDmg} points of moral loss + ${bonusDMG} points of additional moral loss!\n`
@@ -89,27 +89,27 @@ function determineWinner() {
                 console.log(`You have reached level ${playerLevel} and are closer to enlightenment!`
                 );
             }
-            hasItems = true;
+            hasTools = true;
 //Add if statment that only adds up to 100 hp, 
             if (hp < 100) {
                 hp = hp + 30;
             }
             temptationHp = 100;
-            userInventory.push(playerItem);
+            userTools.push(playerItem);
             break;
         } else if (hp <= 0) {
 // Moral is gone and asks user to play again. If yes, temptation respawns with full Hp & tools of morality clear out. 
             console.log(`\nOh no! You gave into temptation!\n`);
             playAgain();
             temptationHp = 100;
-            userInventory = [];
+            userTools = [];
             break;
         }
     }
 }
 // Function to allow player to play again or not.
 function playAgain() {
-    const playAgain = readLine.keyInYN("Would you like to journey again? ");
+    const playAgain = readLine.keyInYN("Would you like to try again? ");
     if (playAgain === true) {
         hp = 100;
     } else {
