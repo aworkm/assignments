@@ -36,7 +36,7 @@ function walk() {
         playAgain();
     }
 } 
-// Fight or Run fucntion//
+// Fight or Run fucntion and variables with 50% chance of happening//
 function fight() {
     const willFight = readLine
         .keyIn("A temptation has appeared! Press 'f' to fight temptation or 'r' to resist and run.", { limit: "fr" }
