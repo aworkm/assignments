@@ -2,8 +2,8 @@
 //I need to prepare the variables first, that includes enableing readLine, a greeting message, a question for the userName, a changeable inventory (let), healthpoints (let) for user & possible temptations, 
 
 const readLine = require("readline-sync");
-const greeting = console.log("Greetings traveler, you are about to embark on a journey of a lifetime to collect knowledge by resistance to tempations like Doubt, Negative self-talk, Procrastination, and Distractions. It will take stamina, patience, discernment in order to keep moral high.");
-const userName = readLine.question("Before we bein, please tell me your name: ");
+const greeting = console.log("Greetings traveler, you are about to embark on a journey of a lifetime to collect knowledge by resistance to temptations like Doubt, Negative self-talk, Procrastination, and Distractions. It will take stamina, patience, discernment in order to keep moral high.");
+const userName = readLine.question("Before we begin, please tell me your name: ");
 let userInventory = [];
 let hasItems = false;
 let hp = 100;
@@ -79,13 +79,13 @@ function determineWinner() {
         console.log(`\nThe ${temptation} lurs you in for ${temptationDmg} points of moral loss!\n`);
         hp = hp - temptationDmg;
         if (temptationHp <= 0) {
-            console.log(`\nYou have overcome the temptation and moral has been restored to you by 50 points! You now have more tools in your mindset to over come temptation. You are getting closer to enlightenment!\n`
+            console.log(`\nYou have overcome the temptation and moral has been restored to you by 33 points! You now have more tools in your mindset to over come temptation. You are getting closer to enlightenment!\n`
             );
-            experience = experience + 50;
+            experience = experience + 33;
             if (experience === 100) {
                 playerLevel++;
                 hp = 100;
-                experince = 0;
+                experience = 0;
                 console.log(`You have reached level ${playerLevel} and are closer to enlightenment!`
                 );
             }
