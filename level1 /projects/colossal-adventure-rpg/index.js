@@ -35,4 +35,24 @@ function walk() {
             playAgain();
         }
     } 
+
+// Fight or Run fucntion//
+    function fight() {
+        const willFight = readLine.keyIn("A temptation has appeared! Press 'f' to fight or 'r' to resist and run.", { limit: "fr" }
+        )
+        .toLowerCase();
+        const atttemptToRun = Math.random();
+        if (willFight === "f") {
+            determineWinner();
+        } else if (willFight === "r" && attemptToRun >= 0.5) {
+            console.log("You have escaped temptation, one step closer to enlightenment.");
+        } else if (attemptToRun < 0.5) {
+            console.log("Your attempt to leave the temptation has faltered, you must prepare to lose some enlightnement.");
+            determineWinner();
+        }
+    }
+// Function for type of temptation and what item user will use to resist the temptation. 
+    function determineWinner() {
+        const tempatations = ["Self Doubt", "Procrastination", ""]
+    }
 }
