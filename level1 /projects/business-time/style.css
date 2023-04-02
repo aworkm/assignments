@@ -12,7 +12,7 @@
     flex-direction: column;
   }
   
-  /* **********NAV STYLING********* */
+  /* NAV STYLING */
   
   .nav-container {
     background-color: #5a786b;
@@ -50,46 +50,13 @@
     text-decoration: underline overline;
   }
   
-  /* **********Image Styling********** */
-  
-  .hero-img {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-  }
-  
-  .hero-img h2 {
-    margin-bottom: 2rem;
-    color:rgb(27, 53, 68);
-  }
+  /* Image Styling */
 
-  .hero-img figcaption{
-    position: absolute;
-    display: flex;
-    top: 90%;
-    left: center;
-    }
-
-    .caption{ 
-        color: white;
-        background-color: #54716474;
-        display: flex;
-        font-size: 22px;
-        border-radius: 5%;
-        background-size: 20%;
-    }
-
-
-  .hero-img img {
-    border-radius: 10px;
-  }
-  
   #image_list {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
   #image_list ul {
@@ -105,10 +72,43 @@
     width: 350px;
     border-radius: 10px;
     margin-left: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: rem;
   }
   
-  /* **********About Page Styling********** */
+/* Homepage Styling */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: center;
+  text-align: center;
+  height: auto;
+}
+
+.home-header {
+  font-size: 35px;
+  margin-bottom: 2rem;
+  color:rgb(27, 53, 68);
+}
+.meditation-block {
+  display:flex;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+
+.movement-block {
+  display:flex;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+.music-block {
+  display:flex;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+
+  /* About Page Styling */
   
   .about-container {
     display: flex;
@@ -116,7 +116,6 @@
     margin-top: 2rem;
     align-items: center;
     text-align: center;
-    height: 100vh;
   }
   
   .about-header {
@@ -127,16 +126,16 @@
   .about {
     width: 35%;
   }
-
   
-  /* **********Contact Page Styling********** */
+  /* Contact Page Styling */
   
   #contact-container {
     display: flex;
-    justify-content: center;
-    height: 100vh;
+    flex-direction: column;
+    margin-top: 2rem;
     text-align: center;
-    margin-top: 10rem;
+    align-items: center;
+  
   }
   
   #contact-container h2 {
@@ -162,19 +161,33 @@
     width: 500px;
   }
   
+  #paragraph {
+    display:flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-direction:column;
+    align-items: center;
+    text-align:center;
+
+  }
   
-  /* **********Footer Styling********** */
+  /* Footer Styling */
   
   .footer-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     height: 50px;
     background-color: #0f0f0e;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   
-  /* **********Media********** */
+  /* Media */
   
   @media only screen and (max-width: 768px) {
     nav {
@@ -182,10 +195,6 @@
       flex-direction: column;
     }
   
-    .hero-img img {
-      height: 300px;
-      width: 350px;
-    }
   
     #image_list ul {
       display: flex;
@@ -196,7 +205,5 @@
     #contact-container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
   }
