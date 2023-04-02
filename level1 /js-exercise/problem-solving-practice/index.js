@@ -54,7 +54,7 @@ function largest(arr) {
 // console.log(lettersWithStrings(["#3", "$$$", "C%4!", "Hey!"], "!"));
 // console.log(lettersWithStrings(["yellow", "green", "^up^", "down", "dog"], "h"));
 
-//  I cannot console.log all three at once 
+//  I cannot console.log all three at once ^^^
 
 function isDivisible(num1, num2) {
   let result = num1 / num2;
