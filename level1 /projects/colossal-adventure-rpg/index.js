@@ -2,7 +2,7 @@
 //I need to prepare the variables first, that includes enableing readLine, a greeting message, a question for the userName, a changeable inventory (let), healthpoints (let) for user & possible temptations, 
 
 const readLine = require("readline-sync");
-const greeting = console.log("Greetings traveler, you are about to embark on a journey of a lifetime to collect knowledge by resistance to tempations like Doubt, Negative self-talk, Procrastination, and Distractions. It will take stamina, patience, discernment from temptation and willingness to learn in order to keep moral high.");
+const greeting = console.log("Greetings traveler, you are about to embark on a journey of a lifetime to collect knowledge by resistance to tempations like Doubt, Negative self-talk, Procrastination, and Distractions. It will take stamina, patience, discernment in order to keep moral high.");
 const userName = readLine.question("Before we bein, please tell me your name: ");
 let userInventory = [];
 let hasItems = false;
@@ -57,7 +57,7 @@ function determineWinner() {
     const temptations = ["Doubt", "Procrastination", "Distraction", "Negative Self-Talk"];
     const randomTemptation = Math.floor(Math.random() * temptations.length);
     const temptation = temptations[randomTemptation];
-    const items = ["Affirmation", "Calling Guides and Guardians", "Mediate", "Banish It"];
+    const items = ["Affirmation", "Calling Guides and Guardians", "Meditate", "Banish It"];
     const randomItems = Math.floor(Math.random() * items.length);
     const playerItem = items [randomItems];
 
@@ -79,14 +79,14 @@ function determineWinner() {
         console.log(`\nThe ${temptation} lurs you in for ${temptationDmg} points of moral loss!\n`);
         hp = hp - temptationDmg;
         if (temptationHp <= 0) {
-            console.log(`\nYou have overcome the temptation and moral has been restored to you. You have been boosted with more tools in your mindset to over come temptation. You have gained closer proximity to enlightenment!\n`
+            console.log(`\nYou have overcome the temptation and moral has been restored to you by 50 points! You now have more tools in your mindset to over come temptation. You are getting closer to enlightenment!\n`
             );
-            experience = experience + 30;
+            experience = experience + 50;
             if (experience === 100) {
                 playerLevel++;
                 hp = 100;
                 experince = 0;
-                console.log(`You have reached level ${playerLevel} and you have reached closer to enlightenment!`
+                console.log(`You have reached level ${playerLevel} and are closer to enlightenment!`
                 );
             }
             hasItems = true;
@@ -113,7 +113,7 @@ function playAgain() {
     if (playAgain === true) {
         hp = 100;
     } else {
-        console.log("Come back when you are ready to venture again to enlightenment!");
+        console.log("Come back when you are ready to overcome temptation to reach enlightenment!");
     }
 }
 // Random damage range when temptations are encountered
